@@ -1,4 +1,12 @@
 local autocmd = vim.api.nvim_create_autocmd
+local cgroup = vim.api.nvim_create_augroup("interp_c", {clear=true})
+
+
+autocmd({ "BufNewFile", "BufRead" }, {
+    pattern = "*.c, *.h",
+    group=cgroup,
+    command= "set filetype c.doxygen"
+})
 
 -- Auto resize panes when resizing nvim window
 autocmd("VimResized", {
