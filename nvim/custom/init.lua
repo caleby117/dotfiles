@@ -17,10 +17,6 @@ autocmd("VimResized", {
 autocmd("VimEnter", {
     pattern = "*",
     callback = function ()
-        require("nvim-tree.api").tree.open()
-        vim.cmd("wincmd l")
-        require("nvterm.terminal").new "horizontal"
-        vim.cmd("wincmd k")
         vim.opt.tabstop = 4
         vim.opt.expandtab = true
         vim.opt.softtabstop = 4

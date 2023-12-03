@@ -47,7 +47,17 @@ local plugins = {
     end,
   },
 
-  -- To make a plugin not be loaded
+
+  {
+    'stevearc/conform.nvim',
+    opts = {},
+    config = function()
+       require "custom.configs.conform"
+    end,
+    lazy = false,
+  },
+
+  -- To make a plugin not be loadedk
   -- {
   --   "NvChad/nvim-colorizer.lua",
   --   enabled = false
