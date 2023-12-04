@@ -11,6 +11,10 @@ M.general = {
     ["N"] = { "Nzzzv", "find string while keeping cursor in middle"},
     ["<leader>d"] = {"\"_d", "preserve the yanked content"},
     ["Q"] = {"<nop>", "do not press Q"},
+    ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right"},
+    ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down"},
+    ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window Up"},
+    ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left"},
   },
   v = {
     [">"] = { ">gv", "indent"},
