@@ -122,3 +122,6 @@ if [ -f '/home/caleby/google-cloud-sdk/path.bash.inc' ]; then . '/home/caleby/go
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/caleby/google-cloud-sdk/completion.bash.inc' ]; then . '/home/caleby/google-cloud-sdk/completion.bash.inc'; fi
+
+# PATH includes for pio
+PATH=$PATH:/home/caleby/.platformio/penv/bin/
