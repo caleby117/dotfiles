@@ -1,4 +1,4 @@
-local null_ls = require("null-ls")
+local null_ls = require "null-ls"
 
 local b = null_ls.builtins
 
@@ -24,3 +24,4 @@ null_ls.setup({
 	update_in_insert = true,
 	root_dir = require("null-ls.utils").root_pattern(".null-ls-root", "Makefile", ".git", ".ccls"),
 })
+

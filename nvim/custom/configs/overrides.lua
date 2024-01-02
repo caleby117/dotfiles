@@ -36,9 +36,10 @@ M.mason = {
 		"deno",
 		"prettier",
 
-		-- c/cpp stuff
-		"clangd",
-		"clang-format",
+    -- c/cpp stuff
+    "clangd",
+    "clang-format",
+    "ccls",
 
 		-- python
 		"ruff-lsp",

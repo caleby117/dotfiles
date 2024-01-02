@@ -4,6 +4,11 @@ local overrides = require("custom.configs.overrides")
 local plugins = {
 
   -- Override plugin definition options
+  {
+        "christoomey/vim-tmux-navigator",
+        lazy=false,
+        enabled=true,
+  },
 
   {
     "neovim/nvim-lspconfig",
@@ -12,7 +17,7 @@ local plugins = {
       {
         "jose-elias-alvarez/null-ls.nvim",
         config = function()
-          require "custom.configs.null-ls"
+          return require "custom.configs.null-ls"
         end,
       },
     },
