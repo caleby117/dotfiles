@@ -9,3 +9,4 @@ alias pls='sd $(fc -ln -1)'
 alias cls="clear"
 alias cs="printf '\033[s\033[1A\033[1J\033[u';"
 alias embedded="cd ~/ros_ws/src/embedded/"
+alias idf=". $HOME/esp/v5.2/export.sh"
