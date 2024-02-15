@@ -4,7 +4,7 @@
 local M = {}
 -- UI
 M.base_30 = {
-	white = "#aaaaaa",
+	white = "#dfdfdf",
 	black = "#1c1c1c", -- usually your theme bg
 	darker_black = "#121212", -- 6% darker than black
 	black2 = "#262626", -- 6% lighter than black
@@ -33,7 +33,7 @@ M.base_30 = {
 	cyan = "#87afaf",
 	statusline_bg = "#262626",
 	lightbg = "#333333",
-	pmenu_bg = "#262626",
+	pmenu_bg = "#ffdf87",
 	folder_bg = "#222222",
 }
 
@@ -46,7 +46,7 @@ M.base_16 = {
 	base04 = "#878787",
 	base05 = "#dfdfaf",
 	base06 = "#aaaaaa",
-	base07 = "#aaaaaa",
+	base07 = "#ffdf87",
 	base08 = "#87afaf",
 	base09 = "#c7abab",
 	base0A = "#af875f",
