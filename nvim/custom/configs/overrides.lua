@@ -62,4 +62,12 @@ M.nvimtree = {
 	},
 }
 
+M.telescope = {
+	extensions = {
+		undo = {
+			-- undo stuff here
+		},
+	},
+}
+
 return M

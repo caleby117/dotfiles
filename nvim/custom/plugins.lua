@@ -24,6 +24,15 @@ local plugins = {
 		lazy = false,
 	},
 
+	{
+		"nvim-telescope/telescope.nvim",
+		dependencies = {
+			{
+				"debugloop/telescope-undo.nvim",
+			},
+		},
+	},
+
 	-- override plugin configs
 	{
 		"williamboman/mason.nvim",
