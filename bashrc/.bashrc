@@ -124,4 +124,4 @@ if [ -f '/home/caleby/google-cloud-sdk/path.bash.inc' ]; then . '/home/caleby/go
 if [ -f '/home/caleby/google-cloud-sdk/completion.bash.inc' ]; then . '/home/caleby/google-cloud-sdk/completion.bash.inc'; fi
 
 # PATH includes for pio
-PATH=$PATH:/home/caleby/.platformio/penv/bin/
+PATH=$PATH:${HOME}/.platformio/penv/bin/
