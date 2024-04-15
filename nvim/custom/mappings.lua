@@ -3,7 +3,7 @@ local M = {}
 
 M.general = {
   n = {
-    [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    --[";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["J"] = { "mzJ`z", "Joins lines and keeps cursor where it originally was" },
     ["<C-d>"] = { "<C-d>zz", "jump half page down" },
     ["<C-u>"] = { "<C-u>zz", "jump half page up" },
@@ -28,6 +28,8 @@ M.general = {
   },
 }
 
+--local nomap = vim.keymap.del
+--nomap("n", "<C-h>")
 -- more keybinds!
 
 return M
