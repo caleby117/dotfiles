@@ -1,7 +1,8 @@
+#!/bin/bash
 # some more ls aliases
-alias ll='ls -l'
-alias la='ls -la'
-alias l='ls -CF'
+alias ll='ls -l --color=auto'
+alias la='ls -la --color=auto'
+alias l='ls -CF --color=auto'
 
 # other fun aliases
 alias sd="sudo"
