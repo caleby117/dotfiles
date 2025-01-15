@@ -131,7 +131,7 @@ if [ -f '/home/caleby/google-cloud-sdk/path.bash.inc' ]; then . '/home/caleby/go
 if [ -f '/home/caleby/google-cloud-sdk/completion.bash.inc' ]; then . '/home/caleby/google-cloud-sdk/completion.bash.inc'; fi
 
 # PATH includes for pio
-PATH=$PATH:${HOME}/.platformio/penv/bin/
+PATH=$PATH:${HOME}/.platformio/penv/bin/:${HOME}/.local
 if [ -n "echo $HOSTNAME | grep homeserver" ]; then
     export PICO_SDK_PATH=/home/segar/projects/pico/pico/pico-sdk
     export PICO_EXAMPLES_PATH=/home/segar/projects/pico/pico/pico-examples
@@ -148,6 +148,10 @@ elif [ -n "echo $HOSTNAME | grep ideapad" ]; then
     export _colcon_cd_root=/opt/ros/iron
     source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 mcd() {
   mkdir -p $1 && cd $1
