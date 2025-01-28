@@ -24,3 +24,6 @@ alias shared="cd ~/ros_ws/src/embedded/shared_lib/"
 
 # sourcing ros
 alias rossrc="source /opt/ros/iron/setup.bash"
+
+alias run-ollama="docker run --rm -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama"
+
