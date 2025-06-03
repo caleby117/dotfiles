@@ -149,10 +149,6 @@ elif [ -n "echo $HOSTNAME | grep ideapad" ]; then
     source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 mcd() {
   mkdir -p $1 && cd $1
 }

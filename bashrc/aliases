@@ -1,16 +1,16 @@
 #!/bin/bash
 # some more ls aliases
-alias ll='ls -l --color=auto'
-alias la='ls -la --color=auto'
+alias ll='ls -lh --color=auto'
+alias la='ls -lah --color=auto'
 alias l='ls -CF --color=auto'
 
 # other fun aliases
 alias sd="sudo"
 alias pls='sd $(fc -ln -1)'
 alias cls="clear"
-alias cs="printf '\033[s\033[1A\033[1J\033[u';"
 alias gs="git status"
 alias gc="git checkout"
+alias gp="git fetch && git pull"
 
 # for esp-idf
 alias idf=". $HOME/esp/v5.2/export.sh"
@@ -24,3 +24,7 @@ alias shared="cd ~/ros_ws/src/embedded/shared_lib/"
 
 # sourcing ros
 alias rossrc="source /opt/ros/iron/setup.bash"
+
+# tailscale
+alias tailip="tailscale ip"
+alias tailstat="tailscale status"
