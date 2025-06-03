@@ -28,3 +28,7 @@ alias rossrc="source /opt/ros/iron/setup.bash"
 # tailscale
 alias tailip="tailscale ip"
 alias tailstat="tailscale status"
+
+# ollama
+alias run-ollama="docker run --rm -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama"
+

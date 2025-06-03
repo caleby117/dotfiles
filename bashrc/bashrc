@@ -131,14 +131,14 @@ if [ -f '/home/caleby/google-cloud-sdk/path.bash.inc' ]; then . '/home/caleby/go
 if [ -f '/home/caleby/google-cloud-sdk/completion.bash.inc' ]; then . '/home/caleby/google-cloud-sdk/completion.bash.inc'; fi
 
 # PATH includes for pio
-PATH=$PATH:${HOME}/.platformio/penv/bin/:${HOME}/.local
-if [ -n "echo $HOSTNAME | grep homeserver" ]; then
-    export PICO_SDK_PATH=/home/segar/projects/pico/pico/pico-sdk
-    export PICO_EXAMPLES_PATH=/home/segar/projects/pico/pico/pico-examples
-    export PICO_EXTRAS_PATH=/home/segar/projects/pico/pico/pico-extras
-    export PICO_PLAYGROUND_PATH=/home/segar/projects/pico/pico/pico-playground
+PATH=$PATH:${HOME}/.platformio/penv/bin/:${HOME}/.local:${HOME}/.local/bin
+# if [ -n "echo $HOSTNAME | grep homeserver" ]; then
+#     export PICO_SDK_PATH=/home/segar/projects/pico/pico/pico-sdk
+#     export PICO_EXAMPLES_PATH=/home/segar/projects/pico/pico/pico-examples
+#     export PICO_EXTRAS_PATH=/home/segar/projects/pico/pico/pico-extras
+#     export PICO_PLAYGROUND_PATH=/home/segar/projects/pico/pico/pico-playground
 
-elif [ -n "echo $HOSTNAME | grep ideapad" ]; then
+if [ -n "echo $HOSTNAME | grep ideapad" ]; then
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -152,3 +152,10 @@ fi
 mcd() {
   mkdir -p $1 && cd $1
 }
+
+# Extras depending on which machine this is on
+if [ -f ~/.bash_extras ]; then
+    . ~/.bash_extras
+fi
+
+clear
