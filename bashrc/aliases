@@ -1,0 +1,34 @@
+#!/bin/bash
+# some more ls aliases
+alias ll='ls -lh --color=auto'
+alias la='ls -lah --color=auto'
+alias l='ls -CF --color=auto'
+
+# other fun aliases
+alias sd="sudo"
+alias pls='sd $(fc -ln -1)'
+alias cls="clear"
+alias gs="git status"
+alias gc="git checkout"
+alias gp="git fetch && git pull"
+
+# for esp-idf
+alias idf=". $HOME/esp/v5.2/export.sh"
+
+# for fabrica work
+alias rosws="cd ~/ros_ws/"
+alias embedded="cd ~/ros_ws/src/embedded/"
+alias actuation="cd ~/ros_ws/src/embedded/actuation_controller"
+alias safety="cd ~/ros_ws/src/embedded/safety_controller"
+alias shared="cd ~/ros_ws/src/embedded/shared_lib/"
+
+# sourcing ros
+alias rossrc="source /opt/ros/iron/setup.bash"
+
+# tailscale
+alias tailip="tailscale ip"
+alias tailstat="tailscale status | grep "
+
+# ollama
+alias run-ollama="docker run --rm -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama"
+
