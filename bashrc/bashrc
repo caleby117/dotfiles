@@ -159,3 +159,5 @@ if [ -f ~/.bash_extras ]; then
 fi
 
 clear
+
+export STM32_PRG_PATH=/home/caleby/STM32Cube/STM32CubeProgrammer/bin
