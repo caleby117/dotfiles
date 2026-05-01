@@ -13,17 +13,7 @@ alias gc="git checkout"
 alias gp="git fetch && git pull"
 
 # for esp-idf
-alias idf=". $HOME/esp/v5.2/export.sh"
-
-# for fabrica work
-alias rosws="cd ~/ros_ws/"
-alias embedded="cd ~/ros_ws/src/embedded/"
-alias actuation="cd ~/ros_ws/src/embedded/actuation_controller"
-alias safety="cd ~/ros_ws/src/embedded/safety_controller"
-alias shared="cd ~/ros_ws/src/embedded/shared_lib/"
-
-# sourcing ros
-alias rossrc="source /opt/ros/iron/setup.bash"
+# alias idf=". $HOME/esp/v5.2/export.sh"
 
 # tailscale
 alias tailip="tailscale ip"
