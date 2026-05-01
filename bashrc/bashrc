@@ -25,7 +25,7 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-#shopt -s globstar
+shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
 #[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -125,11 +125,12 @@ parse_git_branch() {
 PS1="$PS1\[\033[35m\] \$(parse_git_branch)\[\033[36m\]\$ \[\033[1;37m\]"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/caleby/google-cloud-sdk/path.bash.inc' ]; then . '/home/caleby/google-cloud-sdk/path.bash.inc'; fi
+# if [ -f '/home/caleby/google-cloud-sdk/path.bash.inc' ]; then . '/home/caleby/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/caleby/google-cloud-sdk/completion.bash.inc' ]; then . '/home/caleby/google-cloud-sdk/completion.bash.inc'; fi
+# if [ -f '/home/caleby/google-cloud-sdk/completion.bash.inc' ]; then . '/home/caleby/google-cloud-sdk/completion.bash.inc'; fi
 
+# TODO: move this to a direnv thing
 # PATH includes for pio
 PATH=$PATH:${HOME}/.platformio/penv/bin/:${HOME}/.local:${HOME}/.local/bin:/usr/local/go/bin
 # if [ -n "echo $HOSTNAME | grep homeserver" ]; then
@@ -137,17 +138,6 @@ PATH=$PATH:${HOME}/.platformio/penv/bin/:${HOME}/.local:${HOME}/.local/bin:/usr/
 #     export PICO_EXAMPLES_PATH=/home/segar/projects/pico/pico/pico-examples
 #     export PICO_EXTRAS_PATH=/home/segar/projects/pico/pico/pico-extras
 #     export PICO_PLAYGROUND_PATH=/home/segar/projects/pico/pico/pico-playground
-
-if [ -n "echo $HOSTNAME | grep ideapad" ]; then
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-    # ROS stuff
-    source /usr/share/colcon_cd/function/colcon_cd.sh
-    export _colcon_cd_root=/opt/ros/iron
-    source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
-fi
 
 mcd() {
   mkdir -p $1 && cd $1
@@ -160,4 +150,5 @@ fi
 
 clear
 
-export STM32_PRG_PATH=/home/caleby/STM32Cube/STM32CubeProgrammer/bin
+# TODO: direnv this??
+# export STM32_PRG_PATH=/home/caleby/STM32Cube/STM32CubeProgrammer/bin
