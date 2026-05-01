@@ -22,3 +22,5 @@ alias tailstat="tailscale status | grep "
 # ollama
 alias run-ollama="docker run --rm -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama"
 
+# bat
+alias bat="batcat"
